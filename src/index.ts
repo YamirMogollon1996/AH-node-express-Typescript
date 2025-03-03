@@ -31,10 +31,16 @@ app.listen(process.env.PUERTO, () => {
 export class app{
 
         public app :   Express.Application ; 
-        constructor(app :  Express.Application  )  {
+        public router = express.Router()  
 
-              this.app  =  express   
-            
+        constructor(app :  Express.Application  )  {
+                this.app =  app 
+              
            
-      }
+      } 
+      public GetListen  (){
+            this.router.get("/Inicialziar losa datos Ajadan  Ya tu Sabes !!!!")
+      } 
+      
+       
 } 
