@@ -4,7 +4,7 @@ import { UserRepository } from "../dominio/user.repositiry";
 const prisma = new PrismaClient();
 
 export class MysqlCreateUser implements UserRepository {
-  
+
   public async createauser(UserDominio: UserDominio): Promise<UserDominio> {
     let query = prisma.userDominio.create({
       data: {
@@ -27,5 +27,12 @@ export class MysqlCreateUser implements UserRepository {
         id: Number(id),
       },
     });
-  }
+  } 
+
+public async  udpateUser (UserDom: UserDominio){
+
+
+
+
+}
 }
