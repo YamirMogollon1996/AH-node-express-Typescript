@@ -28,13 +28,38 @@ app.listen(process.env.PUERTO, () => {
 });
 
 
-export class app{
+export class appA{
+ 
+        public app : express.Application  
+        public edad : number
 
-        public app :   Express.Application ; 
-        constructor(app :  Express.Application  )  {
-
-              this.app  =  express   
-            
-           
+        constructor(app :  Express.Application   ,edad:  number)  {
+            this.app.use(express.urlencoded({extended:true}))
+            this.app.use(express.json())
+            this.edad =  edad
       }
+      
+      public asistente  ()  {
+          console.log("cambios en la rama de Maria ")
+          this.app.listen('9000',  () =>{
+              console.log("corrinedo ene l puerto 9000")
+          })
+
+        
+        
+        }
+
+        public Getalldata  ()  {
+                if ( this.edad > 16 )  {
+                      this.edad  =  199
+                }
+                return
+        } 
+
+        public ver_asistecna ()  {
+              if ( this.edad > 1)  {
+                    console.log("llevanod el proyecto !!!!!!!!!!!")
+              }
+
+        }
 } 
