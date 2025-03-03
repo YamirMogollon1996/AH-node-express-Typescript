@@ -25,5 +25,16 @@ app.listen(process.env.PUERTO, () => {
       }
   }
 
-
 });
+
+
+export class app{
+
+        public app :   Express.Application ; 
+        constructor(app :  Express.Application  )  {
+
+              this.app  =  express   
+            
+           
+      }
+} 
